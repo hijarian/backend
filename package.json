@@ -2,7 +2,6 @@
   "name": "alephbeta-api",
   "version": "1.0.0",
   "description": "Aleph Beta API",
-  "main": "index.js",
   "repository": {
     "url": "https://github.com/clevertech/alephbeta-api"
   },
@@ -14,8 +13,9 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint \"{src,test}/**/*.ts\" --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "author": "Clevertech <support@clevertech.biz>",
   "license": "UNLICENSED",
@@ -28,6 +28,8 @@
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "ts-node": "^9.1.1",
     "tsconfig-paths": "^3.9.0",
@@ -40,5 +42,8 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.7"
+  },
+  "lint-staged": {
+    "*.{js,ts,json}": "eslint --cache --fix"
   }
 }

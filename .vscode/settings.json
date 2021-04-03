@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  // ESLint
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+  ],
+  // TypeScript VSCode configuration
+  "typescript.referencesCodeLens.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+}

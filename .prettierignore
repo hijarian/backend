@@ -1,0 +1,6 @@
+# ignore node_modules
+node_modules
+# ignore build output (make sure it's set to your correct build folder name)
+dist
+# ignore nyc coverage output
+coverage
