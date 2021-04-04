@@ -20,10 +20,12 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
 
+    /* There are modules which don't have explicit default exports, like `helmet` and `moment` */
+    "allowSyntheticDefaultImports": true,
+
     /* Bunch of obscure stuff from Nestjs Typescript starter */
     "declaration": true,
     "removeComments": true,
-    "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "incremental": true
   }
