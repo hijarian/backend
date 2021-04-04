@@ -18,6 +18,10 @@
 15. [x] `.editorconfig` file.
 16. `bullmq` for queues. It has integration with Nest.js
 17. `node-cron` for scheduled tasks. It has integration with Nest.js
+18. [x] `helmet` as an ubiquitous library for headers manipulation, and which sets "important security headers". For Fastify we have to use specifically `fastify-helmet`.
+19. `fastify-cookie` with the support of Nest.js
+20. [x] `fastify-cors` with the support of Nest.js
+21. `fastify-session` with the support of Nest.js
 
 ## External software
 
@@ -31,3 +35,7 @@
  1. Redis
  2. PostgreSQL
  3. Elasticsearch
+
+## Wishlist
+
+ 1. Package with a `pkg`?
