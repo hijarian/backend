@@ -1,2 +1,8 @@
+# skip node_modules
 node_modules
+# we run eslint with `--cache` flag and don't want cache in the repo
 .eslintcache
+# skip build output (make sure it's set to your correct build folder name)
+dist
+# skip nyc coverage output
+coverage
