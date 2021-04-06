@@ -28,5 +28,6 @@
     "removeComments": true,
     "sourceMap": true,
     "incremental": true
-  }
+  },
+  "typeRoots": ["@types", "./node_modules/@types"]
 }
