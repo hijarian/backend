@@ -1,5 +1,4 @@
 {
-  /* This is just blindly copied&pasted from Nestjs Typescript starter. */
   "extends": "./tsconfig.json",
   "exclude": ["node_modules", "dist", "test", "**/*spec.ts"]
 }

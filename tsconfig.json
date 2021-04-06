@@ -1,29 +1,20 @@
 {
   "compilerOptions": {
-    /* No reason to use TS without `strict` */
     "strict": true,
-    /* Nodejs will understand only commonjs in the compiled javascript */
     "module": "commonjs",
-    /* We are long past year 2017 already */
     "target": "es2017",
-    /* Not only we have `src` folder under root, we also have `test` one */
     "baseUrl": "./",
-    /* This would be the name of the output folder */
+    "paths": {
+      "src/*": ["src/*"],
+      "test/*": ["test/*"]
+    },
     "outDir": "./dist",
-    /* Do not check the libraries used because we can't actually control their code */
     "skipLibCheck": true,
-    /* More strict checks */
     "forceConsistentCasingInFileNames": true,
     "noUnusedLocals": true,
-
-    /* Nestjs uses decorators extensively */
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
-    /* There are modules which don't have explicit default exports, like `helmet` and `moment` */
     "allowSyntheticDefaultImports": true,
-
-    /* Bunch of obscure stuff from Nestjs Typescript starter */
     "declaration": true,
     "removeComments": true,
     "sourceMap": true,
