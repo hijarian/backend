@@ -18,9 +18,13 @@
 15. [ ] `bullmq` for queues. It has integration with Nest.js
 16. [ ] `node-cron` for scheduled tasks. It has integration with Nest.js
 17. [x] `helmet` as an ubiquitous library for headers manipulation, and which sets "important security headers". For Fastify we have to use specifically `fastify-helmet`.
-18. [ ] `fastify-cookie` with the support of Nest.js
+18. [x] `fastify-cookie` with the support of Nest.js
 19. [x] `fastify-cors` with the support of Nest.js
-20. [ ] `fastify-session` with the support of Nest.js
+20. [x] `fastify-session` with the support of Nest.js
+21. [x] Logger is included in Nest.js and Fastify have built-in route logger.
+22. [x] Caching layer is included in Nest.js.
+23. [x] Dependency Injection and reflection is included in Nest.js
+24. [ ] Configuration management is included in Nest.js
 
 ## External software
 
@@ -31,9 +35,9 @@
 
 ## External services
 
- 1. Redis - cache, sessions storage
- 2. PostgreSQL - persistent storage
- 3. Elasticsearch - logs, monitoring, search index
+ 1. [ ] Redis - cache, sessions storage
+ 2. [ ] PostgreSQL - persistent storage
+ 3. [ ] Elasticsearch - logs, monitoring, search index
 
 ## Wishlist
 
