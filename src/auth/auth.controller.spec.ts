@@ -14,6 +14,54 @@ describe('Authentication', () => {
     await app.getHttpAdapter().getInstance().ready();
   });
 
+  afterAll(async () => {
+    return await app.close();
+  });
+
+  it('wrong password results in 401 error', async () => {
+    return await app
+      .inject({
+        method: 'POST',
+        url: '/auth/login',
+        payload: {
+          username: 'john',
+          password: '--[WRONG PASSWORD]--',
+        },
+      })
+      .then((response) => {
+        expect(response.statusCode).toEqual(401);
+        expect(response.payload).toEqual('{"statusCode":401,"message":"Unauthorized"}');
+      });
+  });
+
+  it('unknown username results in 401 error', async () => {
+    return await app
+      .inject({
+        method: 'POST',
+        url: '/auth/login',
+        payload: {
+          username: '--[UNKNOWN USERNAME]--',
+          password: '--[DOES NOT MATTER]--',
+        },
+      })
+      .then((response) => {
+        expect(response.statusCode).toEqual(401);
+        expect(response.payload).toEqual('{"statusCode":401,"message":"Unauthorized"}');
+      });
+  });
+
+  it('accessing profile without JWT ends up in an error', async () => {
+    return await app
+      .inject({
+        method: 'GET',
+        url: '/users/profile',
+      })
+      .then((response) => {
+        expect(response.statusCode).toEqual(401);
+        expect(response.payload).toEqual('{"statusCode":401,"message":"Unauthorized"}');
+      });
+  });
+
   it('when receiving the JWT provided after login, return user data', async () => {
     const loginResponse = await app.inject({
       method: 'POST',
