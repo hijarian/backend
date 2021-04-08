@@ -1,14 +1,20 @@
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
 import { Test } from '@nestjs/testing';
+import { UsersService } from 'src/users/users.service';
 import { AuthModule } from './auth.module';
 
 describe('Authentication', () => {
   let app: NestFastifyApplication;
+  const usersService = { findOne: () => ({ id: 1, username: 'john', password: 'changeme' }) };
 
   beforeAll(async () => {
     const moduleRef = await Test.createTestingModule({
       imports: [AuthModule],
-    }).compile();
+    })
+      .overrideProvider(UsersService)
+      .useValue(usersService)
+      .compile();
+
     app = moduleRef.createNestApplication<NestFastifyApplication>(new FastifyAdapter());
     await app.init();
     await app.getHttpAdapter().getInstance().ready();

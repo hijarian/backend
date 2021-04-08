@@ -6,3 +6,5 @@ node_modules
 dist
 # skip nyc coverage output
 coverage
+# skip .env
+.env
