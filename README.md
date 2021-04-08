@@ -7,9 +7,9 @@
  4. [x] `typescript` because type safety. This assumes `tsconfig.json` with `strict: true`.
  5. [ ] Docker because it's a standard for deploy now. This assumes `Dockerfile` and `.dockerignore`.
  6. [x] `jest` as an all-in-one solution for testing.
- 7. [ ] `supertest` for HTTP testing.
+ 7. [x] We don't need `supertest` for HTTP testing because Fastify have this functionality built-in.
  8. [x] `nestjs` as an architecture layer. It includes logger. We get rxjs for free!
- 9. [ ] `prisma` for ORM, because it has integration with Nest.js and it is compiled.
+ 9. [x] `prisma` for ORM, because it has integration with Nest.js and it is compiled.
 10. [x] `fastify` for web server because it has integration with Nest.js
 11. [ ] `dotenv` for configuration management because it has integration with Nest.js
 12. [x] `passportjs` for authentication
