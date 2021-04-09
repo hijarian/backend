@@ -11,7 +11,8 @@
     "streetsidesoftware.code-spell-checker",
     "ee92.folderize",
     "eamodio.gitlens",
-    "prisma.prisma"
+    "prisma.prisma",
+    "mikestead.dotenv"
   ],
   // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
   "unwantedRecommendations": [

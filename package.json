@@ -1,7 +1,7 @@
 {
-  "name": "alephbeta-api",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Aleph Beta API",
+  "description": "Backend example",
   "repository": {
     "url": "https://github.com/clevertech/alephbeta-api"
   },
@@ -20,7 +20,7 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "prepare": "husky install"
   },
-  "author": "Clevertech <support@clevertech.biz>",
+  "author": "CleverTech <support@clevertech.biz>",
   "license": "UNLICENSED",
   "devDependencies": {
     "@nestjs/cli": "^7.6.0",
@@ -54,6 +54,7 @@
     "@mgcrea/fastify-session": "^0.14.1",
     "@mgcrea/fastify-session-redis-store": "^0.9.1",
     "@nestjs/common": "^7.6.15",
+    "@nestjs/config": "^0.6.3",
     "@nestjs/core": "^7.6.15",
     "@nestjs/jwt": "^7.2.0",
     "@nestjs/passport": "^7.1.5",

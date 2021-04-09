@@ -5,7 +5,7 @@ import { AuthModule } from './auth.module';
 
 describe('Authentication', () => {
   let app: NestFastifyApplication;
-  const usersService = { findOne: () => ({ id: 1, username: 'john', password: 'changeme' }) };
+  const usersService = { findOne: () => ({ id: 1, username: 'john', password: 'change me' }) };
 
   beforeAll(async () => {
     const moduleRef = await Test.createTestingModule({
@@ -74,7 +74,7 @@ describe('Authentication', () => {
       url: '/auth/login',
       payload: {
         username: 'john',
-        password: 'changeme',
+        password: 'change me',
       },
     });
 
