@@ -11,7 +11,7 @@
  8. [x] `nestjs` as an architecture layer. It includes logger. We get rxjs for free!
  9. [x] `prisma` for ORM, because it has integration with Nest.js and it is compiled.
 10. [x] `fastify` for web server because it has integration with Nest.js
-11. [ ] `dotenv` for configuration management because it has integration with Nest.js
+11. [x] `dotenv` for configuration management because it has integration with Nest.js
 12. [x] `passportjs` for authentication
 13. [ ] `swagger` for OpenAPI spec. It has integration with Nest.js
 14. [x] `.editorconfig` file.
@@ -24,7 +24,7 @@
 21. [x] Logger is included in Nest.js and Fastify have built-in route logger.
 22. [x] Caching layer is included in Nest.js.
 23. [x] Dependency Injection and reflection is included in Nest.js
-24. [ ] Configuration management is included in Nest.js
+24. [x] Configuration management is included in Nest.js
 
 ## External software
 
